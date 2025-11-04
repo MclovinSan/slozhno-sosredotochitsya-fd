@@ -1,5 +1,206 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--page-background);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--accent-color);
+  position: relative;
+}
+
+/* повторяющийся код */
+.font-base {
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.font-bold {
+  font-family: 'IBM Plex mono', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header::before, .header::after, .footer::before, .footer::after {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-style: solid;
+  border-color: var(--accent-color);
+}
+
+.title-decor {
+  color: var(--title-decor-color);
+  background-color: var(--accent-color);
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.heading {
+  color: var(--title-color);
+  font-size: var(--title-size);
+  line-height: 0.825;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header::before, .footer::before {
+  bottom: clamp(0.625rem, 2.545vw + 0.029rem, 1.25rem);
+  left: clamp(0.625rem, 0.939vw + 0.405rem, 1.25rem);
+  border-width: 0 0 2px 2px;
+}
+
+.header::after, .footer::after {
+  top: clamp(0.625rem, 0.939vw + 0.405rem, 1.25rem);
+  right: clamp(0.625rem, 0.939vw + 0.405rem, 1.25rem);
+  border-width: 2px 2px 0 0;
+}
+
+.link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  border: 1px solid transparent;
+}
+
+.link:hover {
+  border-bottom-color: var(--paragraph-color);
+  cursor: pointer;
+}
+
+.link:focus {
+  border-color: var(--paragraph-color);
+}
+
+/* основной код */
+.header {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  block-size: 100vh;
+  position: relative;
+}
+
+.rec-label {
+  display: block;
+  grid-row: 1;
+  grid-column: 1;
+  align-self: start;
+  justify-self: end;
+  margin: clamp(0.625rem, 0.939vw + 0.405rem, 1.25rem) clamp(2.375rem, 0.939vw + 2.155rem, 3rem) 0 0;
+  line-height: 25px;
+}
+
+.rec-label::after {
+  content: "";
+  position: absolute;
+  top: clamp(1.125rem, 0.939vw + 0.905rem, 1.75rem);
+  right: clamp(1.188rem, 0.939vw + 0.967rem, 1.813rem);
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+}
+
+.header__theme-menu {
+  grid-row: 1;
+  grid-column: 1;
+  align-self: center;
+  justify-self: end;
+  margin: clamp(2.438rem, 27.226vw - 3.944rem, 9.125rem) clamp(0.625rem, 2.545vw + 0.029rem, 1.25rem) 0 0;
+}
+
+.header__theme-menu-list {    
+    display: flex;
+    flex-direction: column;
+  }
+
+.header__theme-menu-button {
+  background-color: transparent;
+  margin: 5px;
+  padding: 1.5px 13px 1.5px 13px;
+  height: 100%;
+  line-height: 20px;
+  border: 1px solid transparent;
+}
+
+.header__theme-menu-button:hover:not(.header__theme-menu-button_active) {
+  border-color: rgba(var(--accent-color-rgb), 0.5);
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom-color: var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  border-color: var(--accent-color);
+  padding: -3px 13px 1.5px 13px;
+  pointer-events: none;
+}
+
+.header-title {
+  grid-column: 1;
+  grid-row: 2;
+  min-block-size: 192px;
+  padding: clamp(0rem, 31.807vw - 7.455rem, 7.813rem) 0 0 10px;
+}
+
+.header-paragraph {
+  grid-column: 1;
+  grid-row: 3;
+  inline-size: clamp(22.188rem, 2.29vw + 21.651rem, 22.75rem);
+  align-self: start;
+  justify-self: end;
+  padding: 0 50px 0 0;
+  margin: clamp(0rem, 10.178vw - 2.385rem, 2.5rem) clamp(0.625rem, 2.545vw + 0.029rem, 1.25rem) 0 10px;
+  white-space: pre-wrap;
+}
+
+.main {
+  display: grid;
+  padding: clamp(2.5rem, 5.089vw + 1.307rem, 3.75rem) clamp(0.625rem, 2.545vw + 0.029rem, 1.25rem) 0 clamp(0.625rem, 2.545vw + 0.029rem, 1.25rem);
+  grid-template-columns: 1fr;
+  gap: 50px;
+}
+
+.section {
+  display: grid;
+  gap: 20px;
+}
+
+.main-paragraph {
+  color: var(--paragraph-color);
+}
+
+.how-heading-title {
+  margin-bottom: 20px;
+}
+
+.gallery-title {
+  margin-bottom: 20px;
+}
+
+.gallery-div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.gallery-item {
+  max-inline-size: 100%;
+  justify-self: center;
+}
+
+.footer {
+  block-size: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: clamp(2.5rem, 4.515vw + 1.583rem, 3.75rem);
+}
+
+.how-block {
+  line-height: 1.3;
 }

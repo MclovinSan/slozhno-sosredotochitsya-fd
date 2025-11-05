@@ -2,8 +2,16 @@
     --title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
+  .header__theme-menu {
+    margin: 135px 20px 0 0;
+  }
+
  .header-paragraph {
     width: clamp(22.75rem, 49.609vw - 1.063rem, 30.688rem);
+  }
+
+  .header-title {
+    padding-left: 0;
   }
 
   .main {

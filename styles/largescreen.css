@@ -1,3 +1,4 @@
+  
   .header__theme-menu {
     align-self: start;
     justify-self: center;
@@ -7,6 +8,10 @@
   .header__theme-menu-list {    
     display: flex;
     flex-direction: row;
+  }
+
+  .header__theme-menu-button {
+    margin: 0 5px 5px 5px;
   }
 
   .header-title {

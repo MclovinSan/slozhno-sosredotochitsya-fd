@@ -13,12 +13,14 @@
   font-family: 'IBM Plex mono', sans-serif;
   font-size: 18px;
   font-weight: normal;
+  line-height: 23.4px;
 }
 
 .font-bold {
   font-family: 'IBM Plex mono', sans-serif;
   font-size: 18px;
   font-weight: bold;
+  line-height: 23.4px;
 }
 
 .header::before, .header::after, .footer::before, .footer::after {
@@ -33,7 +35,6 @@
 .title-decor {
   color: var(--title-decor-color);
   background-color: var(--accent-color);
-  line-height: 1.35;
   margin-bottom: 10px;
 }
 
@@ -109,7 +110,7 @@
   justify-self: end;
 }
 
-.header__theme-menu-list {    
+.header__theme-menu-list {
   display: flex;
   flex-direction: column;
 }
@@ -169,16 +170,22 @@
   gap: 20px;
 }
 
+.text-block {
+  display: grid;
+  gap: 20px;
+}
+
 .main-paragraph {
   color: var(--paragraph-color);
 }
 
-.how-heading-title {
-  margin-bottom: 20px;
+.what-heading {
+  padding-left: 10px;
 }
 
-.gallery-title {
-  margin-bottom: 20px;
+.how-heading-title {
+  color: var(--title-decor-color);
+  background-color: var(--accent-color);
 }
 
 .gallery-div {
@@ -199,8 +206,4 @@
   justify-content: center;
   align-items: center;
   margin-top: clamp(2.5rem, 4.515vw + 1.583rem, 3.75rem);
-}
-
-.how-block {
-  line-height: 1.3;
 }

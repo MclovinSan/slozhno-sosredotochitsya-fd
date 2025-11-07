@@ -3,7 +3,7 @@
   }
 
   .header__theme-menu {
-    margin: 135px 20px 0 0;
+    margin: 142px 20px 0 0;
   }
 
  .header-paragraph {
@@ -18,35 +18,19 @@
     gap: 80px;
   }
 
- .section {
-  grid-template-columns: 1fr 1fr 1fr;
- }
+  .content-section {
+    grid-template-columns: 1fr 2fr;
+  }
 
- .text-block {
-  grid-column: 2/4;
- }
+  .reasons {
+    .text-blocks {
+      grid-column: 1/-1;
+    }
+  }
 
- .how-heading-title {
-  grid-column: 2/4;
-  margin-left: 9px;
- }
-
- .what-heading {
-  padding-left: 0;
- }
-
- .gallery-title {
-  margin-bottom: 20px;
- }
-
- .why-block, .how-block {
-  grid-column: 2/4;
-  padding-left: 8px;
- }
-
- .reason-block {
-  grid-column: 1/4;
- }
+  .gallery {
+    gap: 20px;
+  }
 
  .gallery-div {
   grid-template-columns: repeat(3, 1fr);

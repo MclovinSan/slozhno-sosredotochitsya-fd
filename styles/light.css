@@ -18,7 +18,7 @@
     --paragraph-color: #353430;
   }
 
-  .header__theme-menu-button, .sect-title {
+  .header__theme-menu-button, .section-heading {
     color: var(--title-decor-color);
   }
 
@@ -44,7 +44,7 @@
 }
 
 .theme-light .header__theme-menu-button, 
-.theme-light .sect-title {
+.theme-light .section-heading {
     color: var(--title-decor-color);
   }
 

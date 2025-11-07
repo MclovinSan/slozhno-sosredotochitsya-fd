@@ -2,7 +2,7 @@
   .header__theme-menu {
     align-self: start;
     justify-self: center;
-    margin: 15px 0 0 0;
+    margin: 17px 0 0 0;
   }
 
   .header__theme-menu-list {
@@ -11,8 +11,13 @@
   }
 
   .header__theme-menu-button {
+    line-height: 18px;
     margin: 0 5px 5px 5px;
   }
+
+  .header__theme-menu-button_active {
+  padding: 0 12px 0 12px;
+}
 
   .header-title {
     padding-top: 60px;
@@ -20,13 +25,19 @@
 
  .header-paragraph {
     padding: 0;
-  } 
-
-  .section-what {
-    grid-template-rows: 0.13fr 1fr;
+    margin-top: 50px;
   }
 
-  .reason-block {
-    grid-row: 2;
-    grid-column: auto;
+  .content-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .text-blocks {
+    grid-column: span 2;
+  }
+
+  .reasons {
+    .text-blocks {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }

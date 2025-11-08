@@ -20,7 +20,7 @@
     --paragraph-color: #F1B2CE;
   }
 
-  .header__theme-menu-button, .sect-title {
+  .header__theme-menu-button, .section-heading {
     color: var(--accent-color);
   }
 
@@ -46,7 +46,7 @@
   }
 
   .theme-dark .header__theme-menu-button,
-  .theme-dark .sect-title {
+  .theme-dark .section-heading {
       color: var(--accent-color);
   }
     
